@@ -1,0 +1,118 @@
+h2 {
+  color: #fecf23;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 0 12px #2a1ba5; }
+
+main {
+  background-color: #05c3a8;
+  width: 100%; }
+  main div input {
+    padding: 10px 15px;
+    background-color: burlywood;
+    border: 1.2px solid red;
+    color: #1c69a0;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px; }
+  main div span {
+    margin: 0 20px;
+    font-size: 1.8rem;
+    color: #ffffff; }
+
+.hh-100 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
+
+.bg-color {
+  background-color: tomato; }
+  .bg-color section button {
+    padding: 12px 20px; }
+
+.bg-tres {
+  background-color: #508fce; }
+
+.bg-list {
+  background-color: seagreen; }
+
+.danger {
+  background-color: rgba(251, 64, 17, 0.877);
+  padding: 12px 20px; }
+
+#guardar {
+  background-color: #11a511;
+  padding: 10px 18px;
+  color: white; }
+
+#guardar:focus {
+  outline: none; }
+
+.bg-slider {
+  background-color: #8989a8;
+  height: 100vh; }
+
+#cartas, #guardarAqui {
+  height: 70vh;
+  overflow-y: auto; }
+
+#guardarAqui::-webkit-scrollbar, #cartas::-webkit-scrollbar {
+  width: 10px; }
+
+#guardarAqui::-webkit-scrollbar-track, #cartas::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+#guardarAqui::-webkit-scrollbar-thumb {
+  background-color: #888; }
+
+#guardarAqui::-webkit-scrollbar-thumb:hover {
+  background-color: #bd8307; }
+
+#cartas::-webkit-scrollbar-thumb {
+  background-color: #888; }
+
+#cartas::-webkit-scrollbar-thumb:hover {
+  background-color: #bd8307; }
+
+.card-title {
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.bg-pokemon {
+  background: linear-gradient(360deg, #d33f34 34%, #ffffff 30%); }
+
+.border-b {
+  border: 4px solid #000000; }
+
+.popup {
+  animation: pup .5s ease; }
+
+@keyframes pup {
+  0% {
+    transform: scale(0.5); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
+
+.remove {
+  animation: borrar .6s ease; }
+
+@keyframes borrar {
+  from {
+    transform: translateX(0);
+    opacity: 1; }
+  to {
+    transform: translateX(50%);
+    opacity: 0; } }
+
+.notita {
+  animation: nota .4s ease; }
+
+@keyframes nota {
+  from {
+    transform: scale(0.5); }
+  to {
+    transform: scale(1); } }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto JS | Boton aumentar y disminuir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+</head>
+<body>
+    
+
+    <main class="hh-100">
+        <div>
+            <input class="btn bg-primary text-white px-4 py-2" type="button" id="resta" value="resta">
+            <span id="cambiaNumber">1</span>
+            <input class="btn bg-primary text-white px-4 py-2" type="button" id="suma" value="suma">
+        </div>
+    </main>
+
+    
+    <div class="hh-100 bg-color">
+        <section>
+            <button class="btn bg-dark text-white" id="cambiar"><strong>Cambiar color</strong></button>
+        </section>
+    </div>
+
+
+    <div class="hh-100 bg-tres">
+        <section>
+            <input id="letras" type="text">
+            <br><br>
+            <p><strong>Letras contadas:</strong> <span id="totalLetras"></span></p>
+        </section>
+    </div>
+
+
+    <div class="hh-100 bg-list">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12 my-3 text-center">
+                    <h5 class="text-white">Presiona ENTER o dale CLICK al boton, para guardar una nota</h5>
+                </div>
+                <div class="col-12 text-center">
+                    <input type="text" id="nota">
+                    <input type="button" class="btn" value="guardar" id="guardar">
+                </div>
+                <div class="col-12 mt-4">
+                    <section id="guardarAqui"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+
+    <div class="bg-slider">
+        <section class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="my-5">POKE API</h2>
+                </div>
+            </div>
+       
+            <div class="row" id="cartas"></div>     
+        </section>
+    </div>
+
+
+ 
+ 
+
+    <template id="template">
+        <div class="d-flex mb-3 w-50 m-auto justify-content-around align-items-center alert alert-success">
+            <p class="mb-0"></p>
+            <a class="ml-4 btn bg-danger text-white filtro fas fa-trash" data-delete="borrar"></a>
+        </div>
+    </template>
+
+
+
+
+    <template id="pokeCard"> 
+        <div class="col-md-4 col-lg-3 col-xl-2 mb-4">
+            <section class="card bg-pokemon border-b">
+                <img src="" alt="" class="card-img-top">
+                <div class="card-body mt-3">
+                    <h6 class="mb-3 card-title text-white text-center"></h6>
+                    <p class="card-text mb-0 text-white">Alto: <span class="alto"></span></p>
+                    <p class="card-text mb-0 text-white">Ancho: <span class="ancho"></span></p>
+                </div>
+            </section>
+        </div>
+    </template>
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

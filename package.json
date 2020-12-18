@@ -1,0 +1,23 @@
+{
+  "name": "proyectospersonales",
+  "version": "1.0.0",
+  "description": "proyectos personales",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass scss/main.scss css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makoto2711/practicasJS.git"
+  },
+  "author": "Nicolas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makoto2711/practicasJS/issues"
+  },
+  "homepage": "https://github.com/makoto2711/practicasJS#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

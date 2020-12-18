@@ -1,2 +1,2 @@
-# ProyectosPersonales
-Aqui voy a guardar todos mis proyectos con Vanilla JS
+# practicasJS
+aqui se subiran practicas de JavaScript
