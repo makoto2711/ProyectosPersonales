@@ -22,6 +22,7 @@
 
 
 
+
 // PROYECTO 2
 !function() 
 {
@@ -43,6 +44,7 @@
 
 
 
+
 // PROYECTO 3
 !function() 
 {
@@ -57,6 +59,7 @@
     })
         
 }();
+
 
 
 
@@ -80,8 +83,6 @@
 
 
     mostrar(arr);
-
-
 
 
     $nota.addEventListener("keyup", (e) => 
@@ -182,6 +183,7 @@
 
 
 
+
 // PROYECTO 5
 !function() 
 {
@@ -190,8 +192,6 @@
           $cartas = document.getElementById("cartas")
 
     let conjuntoDePokemones = [] 
-    
-  
 
     async function api() 
     {
@@ -237,6 +237,113 @@
 
     consumo()
 }();
+
+
+!function() 
+{
+    const subir = document.getElementById("subirFoto"), 
+          archivo = document.getElementById("obtenerArchivo") 
+
+    const c = document.getElementById("caja"),
+          ctx = c.getContext("2d"),
+          image = new Image()
+    
+    let fotoBro
+
+    subir.addEventListener("click", () => 
+    {
+        archivo.click()
+        archivo.addEventListener("change", ()=>
+        { 
+            fotoBro = archivo.files[0] 
+            fotoBro = URL.createObjectURL(fotoBro)            
+            
+            image.addEventListener("load", () => 
+            {
+                c.classList.replace("d-none","marco")
+                // console.log("cargando imagen");
+                ctx.drawImage(image, 0, 0, c.width, c.height)
+            })
+
+            image.src = fotoBro
+        })
+    })
+ 
+}();
+
+
+
+
+!function() 
+{
+    const $cuadro = document.getElementById("cuadro"),
+          $cambiarColor = document.getElementById("cambiarColor"),
+          $colorEscogido = document.getElementById("colorEscogido")
+
+    let guardarTemporal = $colorEscogido.parentNode
+       
+    $cambiarColor.addEventListener("input", ()=> 
+    {
+        $cuadro.style.background = $cambiarColor.value 
+        guardarTemporal.style.filter = "invert(1)"
+        guardarTemporal.style.background = $cambiarColor.value    
+        $colorEscogido.style.color = $cambiarColor.value
+        $colorEscogido.style.filter = "invert(1)"
+        $colorEscogido.style.textShadow = "0 0 7px #000000"
+        $colorEscogido.style.transform = "scale(1.5)"
+        $colorEscogido.textContent = `Color: ${$cambiarColor.value}` 
+    })    
+          
+}();
+
+
+
+!function() 
+{
+    const adivina = document.getElementById("adivina"),
+            rpta = document.getElementById("respuesta")
+
+    let random2
+
+        adivina.addEventListener("keypress", (e)=>
+        {
+            // Validacion con el "e.key" para saber que caracter se presiono
+
+             random2 = Math.floor(Math.random()*5 ) + 1
+
+            if (adivina.value.length > 0 || e.key > 5 || e.key < 1) 
+            {
+                e.preventDefault();
+            }
+            
+
+            if(random2 == adivina.value) 
+            {
+                rpta.textContent = `Ganaste - el numero era: ${random2}` 
+                 rpta.parentNode.classList.add("ganaste")   
+                rpta.parentNode.classList.remove("perdiste")   
+            }
+            else
+            {
+                rpta.textContent = `Perdiste - el numero era: ${random2}`
+                rpta.parentNode.classList.add("perdiste")  
+                rpta.parentNode.classList.remove("ganaste")  
+            }
+        })
+
+}()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

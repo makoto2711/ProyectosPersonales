@@ -47,7 +47,7 @@
                 </div>
                 <div class="col-12 text-center">
                     <input type="text" id="nota">
-                    <input type="button" class="btn" value="guardar" id="guardar">
+                    <a class="btn far fa-calendar-check" id="guardar"></a>
                 </div>
                 <div class="col-12 mt-4">
                     <section id="guardarAqui"></section>
@@ -71,8 +71,57 @@
     </div>
 
 
- 
- 
+
+    <div class="hh-100 bg-canvas">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <section>
+                        <h3 class="my-3 text-white"><strong>Subir una foto Aqui</strong></h3>
+                        <a id="subirFoto" class="btn btn-info text-gray">Subir foto </a>                 
+                        <input type='file' id="obtenerArchivo" class="d-none">
+                    </section>
+                </div>
+                <div class="col-12 my-4 text-center" id="fotitos">
+                        <canvas id="caja" class="d-none" width="500" height="300" id="caja"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="hh-100" id="cuadro">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                     <section class="w-50 m-auto mb-4 p-20">
+                        <h3 class="m-0" id="colorEscogido">Escoger un color</h3>
+                     </section>    
+                    <input class="hw-150" type="color" id="cambiarColor"> 
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    
+
+    <div class="hh-100 bg-adivina">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <section>
+                        <h3 class="text-white mb-4">Adivina el numero - (Entre 1 y 5)</h3>
+                        <input type="number" class="text-center" id="adivina" placeholder="Ingresa un numero"> 
+                        <h4 class="mb-0 mt-4"><strong id="respuesta"></strong></h4>
+                    </section>
+                </div>
+            </div>
+     </div>
+    </div>
+
+
+
 
     <template id="template">
         <div class="d-flex mb-3 w-50 m-auto justify-content-around align-items-center alert alert-success">
@@ -80,8 +129,6 @@
             <a class="ml-4 btn bg-danger text-white filtro fas fa-trash" data-delete="borrar"></a>
         </div>
     </template>
-
-
 
 
     <template id="pokeCard"> 
@@ -96,8 +143,6 @@
             </section>
         </div>
     </template>
-
-
 
 
     <script src="js/main.js"></script>
