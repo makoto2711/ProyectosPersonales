@@ -8,25 +8,51 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield; }
 
+.caja-mapa {
+  height: 350px;
+  width: 400px;
+  margin: auto; }
+
+@media screen and (min-width: 992px) {
+  .w-30 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center; } }
+
+.ml-20 {
+  margin-left: 30px; }
+
+.fecha {
+  margin-left: 6px;
+  padding: 2px 8px;
+  border: 3.5px solid #877d7d;
+  border-radius: 20px; }
+
+.hora {
+  margin-left: 6px;
+  padding: 2px 8px;
+  border: 3.5px solid #877d7d;
+  border-radius: 20px; }
+
 h2 {
   color: #fecf23;
   font-size: 2rem;
   font-weight: 700;
   text-shadow: 0 0 12px #2a1ba5; }
 
-main {
+.bg-main {
   background-color: #05c3a8;
   width: 100%; }
-  main div input {
+  .bg-main div input {
     padding: 10px 15px;
     background-color: burlywood;
-    border: 1.2px solid red;
     color: #1c69a0;
     outline: none;
     cursor: pointer;
     font-weight: 700;
     font-size: 15px; }
-  main div span {
+  .bg-main div span {
     margin: 0 20px;
     font-size: 1.8rem;
     color: #ffffff; }
@@ -39,8 +65,13 @@ main {
 
 .bg-color {
   background-color: tomato; }
-  .bg-color section button {
-    padding: 12px 20px; }
+  .bg-color section #cambiar {
+    padding: 12px 20px;
+    box-shadow: 0 0 10px #000000;
+    transition: all .2s ease; }
+    .bg-color section #cambiar:active {
+      transform: translate(3px, 20px);
+      box-shadow: 0 0 0 #000000; }
 
 .bg-tres {
   background-color: #508fce; }
@@ -153,3 +184,91 @@ main {
 .perdiste {
   color: #ff1200;
   text-shadow: 0 0 9px #000000; }
+
+.bg-slider2 {
+  background: #d0ec6a; }
+
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  height: 400px;
+  width: 500px;
+  margin: auto; }
+  .carousel .image-container {
+    display: flex;
+    transform: translateX(0);
+    transition: all 0.3s linear; }
+    .carousel .image-container img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover; }
+
+.btn-slider {
+  cursor: pointer;
+  font-weight: 600; }
+
+.bg-zoom {
+  background: #6806e9; }
+
+.efectito {
+  text-shadow: 0 0 10px #beed2c;
+  font-size: 2.5rem;
+  color: #ffffff; }
+
+.bg-lluvia {
+  background: #ed4d4d; }
+  .bg-lluvia section {
+    height: 60vh;
+    width: 80%;
+    margin: auto;
+    background-image: url("https://images.unsplash.com/photo-1491002052546-bf38f186af56?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8c25vd3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+
+.caja-fecha {
+  color: #efff00;
+  font-weight: 600;
+  font-size: 2rem; }
+
+.bg-quiz {
+  background: #29619e; }
+
+.pw-container {
+  width: 23%;
+  padding: 18px;
+  background: #000000;
+  border-radius: 18px; }
+
+#lon {
+  width: 40px; }
+
+.dd-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 9px 0;
+  align-items: center;
+  color: #ffffff; }
+
+.bg-game {
+  background: #27918a; }
+
+#juego {
+  background: #92b360;
+  height: 300px;
+  width: 300px;
+  position: relative; }
+  #juego div {
+    height: 30px;
+    width: 30px;
+    background: grey;
+    position: absolute; }
+
+#carga {
+  height: 100%;
+  width: 100%;
+  background-color: #7428d8;
+  position: fixed; }
+
+#hidden {
+  overflow: hidden; }
